@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('fotki/fon.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 70%;
+    max-width: 800px;
+    background-color: #2e2b2b; /* Темный коричневый фон для контейнера */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    color: #eae0d5; /* Светлый цвет текста */
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #a67c52; /* Коричневый акцент */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #d2b48c; /* Песочно-коричневый цвет заголовка */
+}
+
+header p {
+    color: #b39e86; /* Бледно-коричневый для подзаголовка */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #a67c52; /* Коричневый акцент */
+    font-size: 2em;
+    border-left: 5px solid #a67c52;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #d2b48c; /* Песочный коричневый */
+    font-size: 1.6em;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.job {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 4px solid #b39e86; /* Бледно-коричневый акцент */
+    background-color: #3b3a36; /* Темно-коричневый фон для блоков работы */
+    border-radius: 8px;
+}
+
+p, li {
+    color: #eae0d5; /* Светлый цвет текста */
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+span {
+    font-weight: bold;
+    color: #d2b48c; /* Песочный коричневый */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.photo img {
+    width: 150px; /* Задайте ширину фото */
+    height: 200px; /* Задайте высоту фото */
+    border: 3px solid #a67c52; /* Коричневая рамка вокруг фото */
+    object-fit: cover; /* Сохраняет соотношение, чтобы фото вписывалось в рамку */
+}
+
