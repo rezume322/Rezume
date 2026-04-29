@@ -423,3 +423,10 @@ ul li {
     height: 100%;
     border: none;
 }
+
+.video-description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #b39e86;
+    line-height: 1.5;
+}
