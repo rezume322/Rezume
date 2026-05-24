@@ -127,6 +127,70 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.youtube-video iframe').forEach((iframe) => {
+            const src = iframe.getAttribute('src');
+            const match = src && src.match(/embed\/([^?]+)/);
+
+            if (!match) {
+                return;
+            }
+
+            const videoId = match[1];
+            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            const thumbUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+            iframe.loading = 'lazy';
+            iframe.srcdoc = `
+                <style>
+                    * { box-sizing: border-box; }
+                    body {
+                        margin: 0;
+                        min-height: 100vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #1f1d1d;
+                        font-family: Arial, sans-serif;
+                    }
+                    a {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 100vh;
+                        color: #fff;
+                        text-decoration: none;
+                        overflow: hidden;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        opacity: 0.82;
+                    }
+                    span {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 64px;
+                        height: 64px;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        display: grid;
+                        place-items: center;
+                        background: rgba(166, 124, 82, 0.94);
+                        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
+                        font-size: 30px;
+                        line-height: 1;
+                    }
+                </style>
+                <a href="${embedUrl}" aria-label="Play video">
+                    <img src="${thumbUrl}" alt="">
+                    <span>▶</span>
+                </a>
+            `;
+        });
+    </script>
 </body>
 </html>
 
